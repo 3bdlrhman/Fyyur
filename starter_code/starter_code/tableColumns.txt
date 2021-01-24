@@ -1,0 +1,30 @@
+Artist   =>   Table
+
+id
+name
+genres
+city
+state
+phone
+website
+facebook_link
+seeking_venue
+seeking_description
+image_link
+
+###################################
+
+Venue  =>  Table
+
+id
+name
+genres
+address
+city
+state
+phone
+website
+facebook_link
+seeking_talent
+seeking_deskription
+image_link
