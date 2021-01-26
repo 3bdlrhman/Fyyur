@@ -96,7 +96,8 @@ def venues():
 #---------------------------------------------
 @app.route('/venues/search', methods=['POST'])
 def search_venues():
-  word = request.form['search_term']
+  # using form.get('term', '') instead of form['term']. Because it has a fallback option
+  word = request.form.get('search_term', '')
   items = Venue.query.filter(Venue.name.ilike('%{}%'.format(word))).all()
   count = len(items)
 
@@ -125,7 +126,7 @@ def search_venues():
     "count": count,
     "data": data
   }
-  return render_template('pages/search_venues.html', results=response, search_term=request.form.get('search_term', ''))
+  return render_template('pages/search_venues.html', results=response, search_term=word)
 
 #----------------------------------
 @app.route('/venues/<int:venue_id>')
