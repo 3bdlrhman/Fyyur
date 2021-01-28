@@ -192,11 +192,15 @@ def create_venue_form():
 
 #---------------------------------------------#
 @app.route('/venues/create', methods=['POST'])
-def create_venue_submission():  
-  newvenue = Venue(name=request.form['name'],city= request.form['city'],state=request.form['state'],
-                   address=request.form['address'],phone=request.form['phone'],
-                   genres=request.form['genres'],image_link=request.form['image_link'],
-                   facebook_link=request.form['facebook_link'])
+def create_venue_submission():
+  newvenue = Venue()
+  for field in request.form:
+    setattr(newvenue, field, request.form.get(field))
+    
+#   newvenue = Venue(name=request.form['name'],city= request.form['city'],state=request.form['state'],
+#                    address=request.form['address'],phone=request.form['phone'],
+#                    genres=request.form['genres'],image_link=request.form['image_link'],
+#                    facebook_link=request.form['facebook_link'])
   
   try:
     db.session.add(newvenue)
