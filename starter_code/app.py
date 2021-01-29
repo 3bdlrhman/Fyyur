@@ -334,7 +334,7 @@ def show_artist(artist_id):
   
   return render_template('pages/show_artist.html', artist=obj)
 
-#  Update             "NOT COMPLETED"
+#  Update        
 #  ----------------------------------------------------------
 @app.route('/artists/<int:artist_id>/edit', methods=['GET'])
 def edit_artist(artist_id):
@@ -344,7 +344,15 @@ def edit_artist(artist_id):
 
 @app.route('/artists/<int:artist_id>/edit', methods=['POST'])
 def edit_artist_submission(artist_id):
-  # TODO: take values from the form submitted, and update existing
+  artist = Artist.query.get(artist_id)
+  for field in request.form:
+      setattr(artist, field, request.form.get(field))  
+  
+  try:
+    db.session.add(artist)
+    db.session.commit()
+    flash('Artist ' + request.form['name'] + ' was successfully listed!')
+    
   return redirect(url_for('show_artist', artist_id=artist_id))
 
 @app.route('/venues/<int:venue_id>/edit', methods=['GET'])
@@ -356,8 +364,16 @@ def edit_venue(venue_id):
 
 @app.route('/venues/<int:venue_id>/edit', methods=['POST'])
 def edit_venue_submission(venue_id):
-  # TODO: take values from the form submitted, and update existing
-  # venue record with ID <venue_id> using the new attributes
+  
+  venue = Venue.query.get(venue_id)
+  for field in request.form:
+      setattr(venue, field, request.form.get(field))  
+  
+  try:
+    db.session.add(artist)
+    db.session.commit()
+    flash('Venue ' + request.form['name'] + ' was successfully Updated!')
+
   return redirect(url_for('show_venue', venue_id=venue_id))
 
 
