@@ -1,4 +1,4 @@
-# Fyyur (Flask Application):
+# ShowTime (Flask Application):
 Musical Website
 
 # Overview
@@ -23,13 +23,13 @@ Using this website yo are be able to:
 I'll walk you throgh running this server in simple steps:
 
 - First of all clone this Repo to your local machine by
-''' git clone https://github.com/3bdlrhman/Fyyur.git '''
+''' git clone https://github.com/3bdlrhman/ShowTime.git '''
 
 - you should have python3 and pip installed
 
 - Install project dependencies:
 - First change directory to starter_code
 - At the cmd run 
-''' pip install -r requirements.txt '''
+`` pip install -r requirements.txt ``
 - Finally, run 
-'''python app.py '''
+`` python app.py ``
