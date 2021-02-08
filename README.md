@@ -13,11 +13,11 @@ Using this website yo are be able to:
 - Make a Show by attaching an Artist to a Venue.
 - Searching Venue, Artist and Show with a case insensitve matching.
 
-# Developed Using Following Technologies
-## Python
-## Flask
-## SQLALCHEMY
-## Migration
+## Developed Using Following Technologies
+### Python
+### Flask
+### SQLALCHEMY
+### Migration
 
 # Getting Started
 I'll walk you throgh running this server in simple steps:
@@ -28,6 +28,8 @@ I'll walk you throgh running this server in simple steps:
 - you should have python3 and pip installed
 
 - Install project dependencies:
--- First change directory to starter_code
--- At the cmd run '''pip install -r requirements.txt'''
--- Finally, run '''python app.py'''
+- First change directory to starter_code
+- At the cmd run 
+''' pip install -r requirements.txt '''
+- Finally, run 
+'''python app.py '''
