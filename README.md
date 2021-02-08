@@ -22,8 +22,8 @@ Using this website yo are be able to:
 # Getting Started
 I'll walk you throgh running this server in simple steps:
 
-- First of all clone this Repo to your local machine by
-''' git clone https://github.com/3bdlrhman/ShowTime.git '''
+- First of all clone this Repo to your local machine by <BR>
+``` git clone https://github.com/3bdlrhman/ShowTime.git ```
 
 - you should have python3 and pip installed
 
