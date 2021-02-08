@@ -79,8 +79,8 @@ Overall:
 ## Development Setup
 1. **Download the project starter code locally**
 ```
-git clone https://github.com/udacity/FSND.git
-cd FSND/projects/01_fyyur/starter_code 
+git clone https://github.com/3bdlrhman/Fyyur.git
+cd fyyur/starter_code 
 ```
 
 2. **Initialize and activate a virtualenv using:**
@@ -100,9 +100,9 @@ pip install -r requirements.txt
 
 4. **Run the development server:**
 ```
-export FLASK_APP=myapp
-export FLASK_ENV=development # enables debug mode
-python3 app.py
+set FLASK_APP=myapp
+set FLASK_ENV=development # enables debug mode
+python app.py
 ```
 
 5. **Verify on the Browser**<br>
